@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Pre-Loader</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="counter">0</div>
+    </div>
+    <section>
+      <h2>Welcome back to all..!<span>Stay tuned for more video..!</span></h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+        voluptatibus dolorem reiciendis corrupti, delectus ad. Lorem ipsum dolor
+        sit amet consectetur, adipisicing elit. Perferendis sapiente repellat
+        pariatur magni maxime praesentium enim aperiam magnam eveniet rerum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+        officia perspiciatis nobis esse voluptatum consequatur cupiditate
+        voluptas neque vero, quas illo a ducimus est, enim blanditiis rem dolore
+        molestias repudiandae impedit consequuntur quaerat dolorum! Voluptatem.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+        nihil qui voluptatibus, est eum cum asperiores dolor cumque ut, dolore
+        alias odit nostrum hic, soluta fuga blanditiis beatae! Optio, voluptas?
+      </p>
+    </section>
+    <script src="./jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+      function counter() {
+        var count = setInterval(function () {
+          var c = parseFloat($(".counter").text());
+          $(".counter").text((++c).toString());
+          if (c == 100) {
+            clearInterval(count);
+            $(".counter").addClass("hide");
+            $(".preloader").addClass("active");
+          }
+        }, 30);
+      }
+      counter();
+    </script>
+  </body>
+</html>
